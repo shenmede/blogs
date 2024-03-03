@@ -1,7 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh">
 	<head>
+		<title id="title"></title>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0"/>
+		<meta id="themeColor" name="theme-color" content="#f7f7f7"/>
+		<meta name="description" content=""/>
+		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" type="text/css"/>
+		<link rel="stylesheet" href="lib/katex/katex.min.css" type="text/css"/>
+		<link rel="stylesheet" href="index.css" type="text/css"/>
+		<link id="themeCss" rel="stylesheet" href="lib/themes/{{theme}}.min.css" type="text/css"/>
+		<script src="lib/bootstrap/bootstrap.min.js" defer="defer" type="text/javascript" charset="UTF-8"></script>
+		<script src="lib/anchorjs/anchor.min.js" defer="defer" type="text/javascript" charset="UTF-8"></script>
+		<script src="reference.js" type="text/javascript" defer="defer" charset="UTF-8"></script>
+		<script src="index.js" type="text/javascript" defer="defer" charset="UTF-8"></script>
 	</head>
 	<body>
-		Hello World!
+		<div class="navbar navbar-fixed-top">
+			<div id="brightness" class="navbar-inner navbar-expand-lg navbar-{{brightness}}">
+				<div class="container">
+					<button type="button" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" aria-label="菜单">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="brand navbar-nav breadcrumb">
+							<li class="nav-item">
+								<a id="home" class="nav-link active" href="?index.md">
+									<i class="fas fa-home"></i>主页
+								</a>
+							</li>
+							<li id="navigation" class="nav-item breadcrumb-item">
+								<a href="?{{path}}index.md" class="nav-link active"></a>
+							</li>
+							<li class="nav-item breadcrumb-item dropdown">
+								<a id="filename" href="#" class="nav-link active" data-bs-toggle="dropdown"></a>
+								<ul id="tableOfContent" class="dropdown-menu">
+									<li class="nav-item">
+										<a href="#" class="dropdown-item nav-link"></a>
+										<ul class="navbar-nav"></ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="container-lg">
+		</div>
 	</body>
 </html>
