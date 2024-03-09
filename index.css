@@ -60,6 +60,9 @@ em {
 	.navbar-inner.navbar-expand-lg .breadcrumb-item.breadcrumb-item::before {
 		padding-top: 0.5rem;
 	}
+	.breadcrumb li.navbar-status {
+		display: none;
+	}
 }
 @media (min-width: 992px) {
 	.navbar-inner.navbar-expand-lg > .container {

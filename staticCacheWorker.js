@@ -23,7 +23,6 @@ try {
 		if (mapping)
 			url = url.replace(mapping[0], mapping[1]);
 		let index = url.indexOf("?");
-		console.log(url, /\/blogs\/(lib\/|resource\/|index\.js)/.test(url));
 		if (index < 0 && /\/blogs\/(lib\/|resource\/|index\.js)/.test(url))
 			event.respondWith(
 				caches.open('rmd').then(function(cache) {

@@ -3,7 +3,7 @@
 	"short_name" : "Z",
 	"id" : "/blogs/",
 	"start_url" : "/blogs/",
-	"display" : "standalone",
+	"display" : "fullscreen",
 	"background_color": "white",
 	"theme_color" : "white",
 	"description": "Zwieback的个人主页",
