@@ -7,8 +7,8 @@
 		<meta id="themeColor" name="theme-color" content="#f7f7f7"/>
 		<meta name="description" content="Zwieback的个人主页"/>
 		<link rel="manifest" href="manifest.json" type="application/json"/>
-		<link rel="icon" href="resources/zwieback.ico" type="image/x-icon"/>
-		<link rel="apple-touch-icon" href="resources/zwieback_192.png" type="image/png"/>
+		<link rel="icon" href="resource/zwieback.ico" type="image/x-icon"/>
+		<link rel="apple-touch-icon" href="resource/zwieback_192.png" type="image/png"/>
 		<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" type="text/css"/>
 		<link rel="stylesheet" href="lib/katex/katex.min.css" type="text/css"/>
 		<link rel="stylesheet" href="index.css" type="text/css"/>
@@ -21,9 +21,6 @@
 		<script id="customizedJs" src="{{basePath}}customized.js?" type="text/javascript" charset="UTF-8"></script>
 	</head>
 	<body>
-		<script>
-			document.requestFullScreen();
-		</script>
 		<div class="navbar navbar-fixed-top">
 			<div id="brightness" class="navbar-inner navbar-expand-lg navbar-{{brightness}}">
 				<div class="container">
@@ -33,6 +30,13 @@
 						<span class="id-battery-level"></span>
 						<span class="id-battery-charging"></span>
 						<span class="id-battery-time"></span>
+						<span class="id-network-active"></span>
+						<span class="id-network-online"></span>
+						<span class="id-network-type"></span>
+						<span class="id-network-downlink"></span>
+						<span class="id-network-rtt"></span>
+						<span class="id-network-save"></span>
+						<span class="id-time"></span>
 					</button>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="brand navbar-nav breadcrumb">
@@ -58,6 +62,12 @@
 								<span class="id-battery-level"></span>
 								<span class="id-battery-charging"></span>
 								<span class="id-battery-time"></span>
+								<span class="id-network-active"></span>
+								<span class="id-network-online"></span>
+								<span class="id-network-type"></span>
+								<span class="id-network-downlink"></span>
+								<span class="id-network-rtt"></span>
+								<span class="id-time"></span>
 							</li>
 						</ul>
 					</div>
