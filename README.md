@@ -6,7 +6,8 @@ Zwieback的博客
 链接
 --
 
-[功能示例](?demo/index.md)
+* [功能示例](?demo/index.md)
+* [IP地址信息查询](?tools/ip-info.md)
 
 其他平台
 --
