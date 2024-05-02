@@ -23,7 +23,7 @@ try {
 		if (mapping)
 			url = url.replace(mapping[0], mapping[1]);
 		let index = url.indexOf("?");
-		if (index < 0 && (/\/blogs\/(lib\/|resource\/|index\.js)/.test(url) || mapping))
+		if (index < 0 && (/^(https:\/\/[^\/]+)?(\/blogs)?\/?(lib\/|resource\/|index\.js)/.test(url) || mapping))
 			event.respondWith(
 				caches.open('rmd').then(function(cache) {
 					return cache.match(url).then(function (response) {
