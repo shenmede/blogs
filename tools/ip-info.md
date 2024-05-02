@@ -41,8 +41,8 @@
 
 ```script
 // 配置IP地址匹配器
-api.MaxMindMatcher.defaultDatabasePath = "/blogs/resource/tools/GeoLite2-City_v6.mmdb";
-api.MaxMindMatcher.asnDatabasePath = "/blogs/resource/tools/GeoLite2-ASN_v6.mmdb";
+api.MaxMindMatcher.defaultDatabasePath = "resource/tools/GeoLite2-City_v6.mmdb";
+api.MaxMindMatcher.asnDatabasePath = "resource/tools/GeoLite2-ASN_v6.mmdb";
 const IPMatcher = api.IpArtMatcher;
 IPMatcher.debug = false;
 
@@ -93,7 +93,10 @@ const handlers = {
 document.getElementById("ipinput").oninput = function(event) {
 	let matcher = matcherPrototype.clone();
 	let startTime = new Date().getTime();
-	matcher.lookup(event.target.value).then(function(result) {
+	let value = event.target.value;
+	matcher.lookup(value).then(function(result) {
+		if (event.target.value !== value)
+			return;
 		let endTime = new Date().getTime();
 		Object.keys(handlers).forEach(function(key) {
 			let value = handlers[key](result[key]);
