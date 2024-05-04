@@ -7,7 +7,7 @@ Zwieback的博客
 --
 
 * [功能示例](?demo/index.md)
-* [IP地址信息查询](?tools/ip-info.md)
+* [IP地址信息查询](?tools/ip-info.md)[【性能测试】](?tools/ip-test.md)
 
 其他平台
 --
@@ -15,8 +15,11 @@ Zwieback的博客
 [微信公众号](http://weixin.qq.com/r/xTn54eLERb86raaC92zX)：  
 ![http://weixin.qq.com/r/xTn54eLERb86raaC92zX](resource/wechat_qrcode.png)
 
-[CloudFlare](https://zwieback.pages.dev/)：  
+[CloudFlare（不支持Range请求）](https://zwieback.pages.dev/)：  
 ![https://zwieback.pages.dev/](resource/cloudflare_qrcode.png)
+
+[4everland](https://blogs-2.4everland.app/)：  
+![https://blogs-2.4everland.app/](resource/4everland_qrcode.png)
 
 [Github（墙？）](https://shenmede.github.io/blogs/)：  
 ![https://shenmede.github.io/blogs/](resource/github_qrcode.png)

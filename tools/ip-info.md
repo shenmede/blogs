@@ -2,7 +2,7 @@
 
 <div class="mb-3">
 	<label for="ipinput" class="form-label">IP地址</label>
-	<input id="ipinput" name="value" class="form-control" placeholder="请输入IP地址"></input>
+	<input id="ipinput" class="form-control" placeholder="请输入IP地址"></input>
 </div>
 
 <label for="ipoutput" class="form-label">查找结果</label>
@@ -43,8 +43,8 @@
 // 配置IP地址匹配器
 api.MaxMindMatcher.defaultDatabasePath = "resource/tools/GeoLite2-City_v6.mmdb";
 api.MaxMindMatcher.asnDatabasePath = "resource/tools/GeoLite2-ASN_v6.mmdb";
+api.MaxMindMatcher.debug = true;
 const IPMatcher = api.IpArtMatcher;
-IPMatcher.debug = false;
 
 // 初始化IP地址匹配器
 const cityDatabase = IPMatcher.defaultDatabase();
@@ -101,9 +101,9 @@ document.getElementById("ipinput").oninput = function(event) {
 		Object.keys(handlers).forEach(function(key) {
 			let value = handlers[key](result[key]);
 			let element = document.getElementById(key);
-			element.innerText = value || "";
+			element.textContent = value || "";
 		});
-		document.getElementById("time").innerText = (endTime - startTime) + " ms";
+		document.getElementById("time").textContent = (endTime - startTime) + " ms";
 	});
 };
 ```
