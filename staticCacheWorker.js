@@ -3,14 +3,14 @@ try {
 } catch(error) {
 	/** 路径映射 */
 	const pathMappings = [
-		[/^https:\/\/fonts\.googleapis\.com\/css\?family=Josefin\+Sans:300,400,700$/, "/blogs/resource/fonts.googleapis.com_css_family_Josefin_Sans_300_400_700.css"],
-		[/^https:\/\/fonts\.gstatic\.com\/s\/josefinsans\/v20\/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XbMZhKg\.ttf$/, "/blogs/resource/fonts.gstatic.com_s_josefinsans_v20_Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XbMZhKg.ttf"]
+		[/^https:\/\/fonts\.googleapis\.com\/css\?family=Josefin\+Sans:300,400,700$/, "/blogs/resource/fonts.css"],
+		[/^https:\/\/fonts\.gstatic\.com\/s\/josefinsans\/v20\/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XbMZhKg\.ttf$/, "/blogs/resource/fonts.ttf"]
 	];
 	self.addEventListener("install", function(event) {
 		event.waitUntil(caches.open("rmd").then(function(cache) {
 			cache.addAll([
-				"/blogs/resource/fonts.googleapis.com_css_family_Josefin_Sans_300_400_700.css",
-				"/blogs/resource/fonts.gstatic.com_s_josefinsans_v20_Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_N_XbMZhKg.ttf"
+				"/blogs/resource/fonts.css",
+				"/blogs/resource/fonts.ttf"
 			]);
 		}));
 	});

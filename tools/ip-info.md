@@ -40,11 +40,18 @@
 </table>
 
 ```script
-// 配置IP地址匹配器
-api.MaxMindMatcher.defaultDatabasePath = "resource/tools/GeoLite2-City_v6.mmdb";
-api.MaxMindMatcher.asnDatabasePath = "resource/tools/GeoLite2-ASN_v6.mmdb";
+// 配置IP地址匹配器，某些网站不允许上传mmdb文件
+api.MaxMindMatcher.defaultDatabasePath =
+	window.customizedReferences && window.customizedReferences.maxmindDefaultDatabasePath
+	"resource/tools/GeoLite2-City_v6.mmdb";
+api.MaxMindMatcher.asnDatabasePath =
+	window.customizedReferences && window.customizedReferences.maxmindAsnDatabasePath
+	"resource/tools/GeoLite2-ASN_v6.mmdb";
 api.MaxMindMatcher.debug = true;
-const IPMatcher = api.IpArtMatcher;
+const IPMatcher =
+	window.customizedReferences && window.customizedReferences.useMaxMindMatcher ?
+		api.MaxMindMatcher :
+		api.IpArtMatcher;
 
 // 初始化IP地址匹配器
 const cityDatabase = IPMatcher.defaultDatabase();
